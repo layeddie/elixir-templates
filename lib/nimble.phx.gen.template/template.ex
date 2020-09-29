@@ -12,9 +12,7 @@ defmodule Nimble.Phx.Gen.Template.Template do
       WebTemplate.apply(project)
     end
 
-    if Mix.shell().yes?("\nFetch and install dependencies?") do
-      Mix.shell().cmd("mix deps.get")
-    end
+    if Mix.shell().yes?("\nFetch and install dependencies?"), do: Mix.shell().cmd("mix deps.get")
   end
 
   # Common setup for both API and Web projects

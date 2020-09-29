@@ -8,7 +8,5 @@ defmodule Nimble.Phx.Gen.Template.Addons.Makefile do
     project
   end
 
-  defp copy_files() do
-    Generator.copy_file([{:text, "Makefile", "Makefile"}])
-  end
+  defp copy_files(), do: Generator.copy_file([{:text, "Makefile", "Makefile"}])
 end

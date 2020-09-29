@@ -5,7 +5,5 @@ defmodule Nimble.Phx.Gen.Template.Project do
             web_test_path: nil,
             is_api_project: nil
 
-  def api?(project) do
-    project.is_api_project === true
-  end
+  def api?(project), do: project.is_api_project === true
 end

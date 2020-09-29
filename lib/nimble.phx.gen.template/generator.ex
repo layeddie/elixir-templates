@@ -71,9 +71,7 @@ defmodule Nimble.Phx.Gen.Template.Generator do
     )
   end
 
-  def print_log(prefix, content \\ "") do
-    Mix.shell().info([:green, prefix, :reset, content])
-  end
+  def print_log(prefix, content \\ ""), do: Mix.shell().info([:green, prefix, :reset, content])
 
   defp split_with_self(contents, text) do
     case :binary.split(contents, text) do
