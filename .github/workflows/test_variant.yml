@@ -1,6 +1,6 @@
 name: "Test variants"
 
-on: commit
+on: push
 
 env:
   OTP_VERSION: 23.0.2
