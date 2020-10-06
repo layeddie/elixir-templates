@@ -4,7 +4,7 @@ install_phoenix:
 	printf "Y\n" | mix archive.install hex phx_new ${PHOENIX_VERSION}
 
 create_project:
-	echo "Y Y" | mix phx.new anduong ${OPTIONS}
+	echo "Y\nY\n" | mix phx.new ${PROJECT_DIRECTORY} ${OPTIONS}
 
 apply_template:
 	cd ${PROJECT_DIRECTORY} && \
@@ -13,4 +13,4 @@ apply_template:
 	rm nimble_phx_gen_template.txt && \
 	mix deps.get && \
 	mix format && \
-	echo "Y Y Y Y" | mix nimble.phx.gen.template --${VARIANT}
+	printf "Y\nY\nY\nY\n" | mix nimble.phx.gen.template --${VARIANT}
