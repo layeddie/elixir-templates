@@ -1,6 +1,6 @@
 name: "Test variants"
 
-on: pull_request
+on: commit
 
 env:
   OTP_VERSION: 23.0.2
