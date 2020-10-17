@@ -23,7 +23,7 @@ mix nimble.phx.gen.template --api # Apply the API template
 ```
 ## Requirements
 
-NimblePhxGenTemplate has been developed and actively tested with Elixir 1.11+, Erlang/OTP 23.1+ and Phoenix 1.5+. Running NimblePhxGenTemplate currently requires Elixir 1.11+, Erlang/OTP 23.1+ and Phoenix 1.5+.
+NimblePhxGenTemplate has been developed and actively tested with Elixir 1.11+, Erlang/OTP 23.1+ and Phoenix 1.5.6+. Running NimblePhxGenTemplate currently requires Elixir 1.11+, Erlang/OTP 23.1+ and Phoenix 1.5.6+.
 
 ## License
 
