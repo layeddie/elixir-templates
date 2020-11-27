@@ -42,7 +42,7 @@ apply_template:
 	
 apply_mix_template:
 	cd ${PROJECT_DIRECTORY} && \
-	echo '{:nimble_phx_gen_template, path: "../", only: :dev}' > nimble_phx_gen_template.txt && \
+	echo '{:nimble_phx_gen_template, path: "../", only: :dev, runtime: false}' > nimble_phx_gen_template.txt && \
 	sed -i -e '/# {:dep_from_git, /r nimble_phx_gen_template.txt' mix.exs && \
 	rm nimble_phx_gen_template.txt && \
 	mix deps.get && \
