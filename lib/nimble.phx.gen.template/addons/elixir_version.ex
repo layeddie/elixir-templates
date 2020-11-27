@@ -2,6 +2,11 @@ defmodule Nimble.Phx.Gen.Template.Addons.ElixirVersion do
   use Nimble.Phx.Gen.Template.Addon
 
   @impl true
+  def do_apply(%Project{mix_project?: true} = project, _opts) do
+    copy_files(project)
+  end
+
+  @impl true
   def do_apply(%Project{} = project, _opts) do
     project
     |> copy_files()

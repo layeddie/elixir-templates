@@ -23,6 +23,7 @@ defmodule Nimble.Phx.Gen.Template.Project do
             api_project?: false,
             web_project?: false,
             live_project?: false,
+            mix_project?: false,
             erlang_asdf_version: @default_versions[:erlang_asdf_version],
             elixir_asdf_version: @default_versions[:elixir_asdf_version],
             elixir_mix_version: @default_versions[:elixir_mix_version],
@@ -34,6 +35,7 @@ defmodule Nimble.Phx.Gen.Template.Project do
       api_project?: api_project?(opts),
       web_project?: web_project?(opts),
       live_project?: live_project?(opts),
+      mix_project?: mix_project?(opts),
       otp_app: otp_app(),
       base_module: base_module(),
       base_path: "lib/" <> Atom.to_string(otp_app()),
@@ -49,6 +51,8 @@ defmodule Nimble.Phx.Gen.Template.Project do
   defp web_project?(opts), do: opts[:web] === true || opts[:live] === true
 
   defp live_project?(opts), do: opts[:live] === true
+
+  defp mix_project?(opts), do: opts[:mix] === true
 
   defp otp_app(), do: Mix.Phoenix.otp_app()
 

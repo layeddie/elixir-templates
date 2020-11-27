@@ -1,8 +1,15 @@
 defmodule Nimble.Phx.Gen.Template.Template do
   alias Nimble.Phx.Gen.Template.Api.Template, as: ApiTemplate
   alias Nimble.Phx.Gen.Template.Live.Template, as: LiveTemplate
+  alias Nimble.Phx.Gen.Template.Mix.Template, as: MixTemplate
   alias Nimble.Phx.Gen.Template.Web.Template, as: WebTemplate
   alias Nimble.Phx.Gen.Template.{Addons, Project}
+
+  def apply(%Project{mix_project?: true} = project) do
+    MixTemplate.apply(project)
+
+    if Mix.shell().yes?("\nFetch and install dependencies?"), do: Mix.shell().cmd("mix deps.get")
+  end
 
   def apply(%Project{} = project) do
     project

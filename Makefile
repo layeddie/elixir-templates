@@ -6,6 +6,9 @@ install_phoenix:
 
 create_project:
 	mix phx.new ${PROJECT_DIRECTORY} ${OPTIONS}
+	
+create_mix_project:
+	mix new ${PROJECT_DIRECTORY} ${OPTIONS}
 
 # Y - in response to Will you host this project on Github?
 # Y - in response to Do you want to generate the .github/ISSUE_TEMPLATE and .github/PULL_REQUEST_TEMPLATE?
@@ -36,6 +39,15 @@ apply_template:
 	elif [ $(VARIANT) = live ]; then \
 		printf "${common_addon_prompts}${web_addon_prompts}${live_addon_prompts}${post_setup_addon_prompts}" | mix nimble.phx.gen.template --live; \
 	fi;
+	
+apply_mix_template:
+	cd ${PROJECT_DIRECTORY} && \
+	echo '{:nimble_phx_gen_template, path: "../", only: :dev}' > nimble_phx_gen_template.txt && \
+	sed -i -e '/# {:dep_from_git, /r nimble_phx_gen_template.txt' mix.exs && \
+	rm nimble_phx_gen_template.txt && \
+	mix deps.get && \
+	mix format && \
+	printf "${post_setup_addon_prompts}" | mix nimble.phx.gen.template --mix; \
 
 remove_nimble_phx_gen_template:
 	cd ${PROJECT_DIRECTORY} && \

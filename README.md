@@ -32,6 +32,7 @@ mix nimble.phx.gen.template -v # Print the version
 mix nimble.phx.gen.template --web # Apply the Web template
 mix nimble.phx.gen.template --api # Apply the API template
 mix nimble.phx.gen.template --live # Apply the LiveView template
+mix nimble.phx.gen.template --mix # Apply the Mix template
 ```
 ## Requirements
 
@@ -79,8 +80,9 @@ All files are located under `test/` folder.
 
 ##### 2.1/ Variant
 
-NimblePhxGenTemplate is supporting 3 variants:  
+NimblePhxGenTemplate is supporting 4 variants:  
 
+- Mix
 - API
 - Web
 - Live
@@ -118,6 +120,20 @@ Putting it all together, it is 8 variant test cases.
 - Applying the `Web variant` to a `Custom Web project`
 - Applying the `Live variant` to a `Standard LiveView project`
 - Applying the `Live variant` to a `Custom LiveView project`
+
+##### 2.3/ Mix project
+
+The Mix project could be either a Standard project or Custom project.
+
+- `mix new hello_world`
+- `mix new AppName --module=CustomModuleName`
+- `mix new AppName --app=custom_otp_app_name`
+- `mix new AppName --module=CustomModuleName --app=custom_otp_app_name`
+
+Putting it all together, it is 2 variant test cases.
+
+- Applying the `Mix variant` to a `Standard Mix project`
+- Applying the `Mix variant` to a `Custom Mix project`
 
 ### Release
 
