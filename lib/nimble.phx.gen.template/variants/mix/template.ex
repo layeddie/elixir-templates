@@ -8,6 +8,12 @@ defmodule Nimble.Phx.Gen.Template.Mix.Template do
     |> Addons.Credo.apply()
     |> Addons.Dialyxir.apply()
 
+    # TODO
+    # Github
+    # readme
+    # Improve formatter, credo
+    # mimic addon optional?
+
     project
   end
 end
