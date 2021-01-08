@@ -20,7 +20,7 @@ defmodule Nimble.Phx.Gen.Template.AddonsWeb.WallabyTest do
                      quote do
                        use Wallaby.Feature
 
-                       import Nimble.Phx.Gen.Template.Factory
+                       import NimblePhxGenTemplate.Factory
 
                        alias NimblePhxGenTemplateWeb.Router.Helpers, as: Routes
                      end
@@ -71,7 +71,7 @@ defmodule Nimble.Phx.Gen.Template.AddonsWeb.WallabyTest do
                  {:ok, _} = Application.ensure_all_started(:wallaby)
 
                  ExUnit.start()
-                 Ecto.Adapters.SQL.Sandbox.mode(Nimble.Phx.Gen.Template.Repo, :manual)
+                 Ecto.Adapters.SQL.Sandbox.mode(NimblePhxGenTemplate.Repo, :manual)
 
                  Application.put_env(:wallaby, :base_url, NimblePhxGenTemplateWeb.Endpoint.url())
                  """

@@ -1,10 +1,10 @@
-.PHONY: install_phoenix create_project apply_template remove_nimble_phx_gen_template
+.PHONY: install_phoenix create_phoenix_project apply_phoenix_template create_mix_project apply_mix_template remove_nimble_phx_gen_template
 
 # Y - in response to Are you sure you want to install "phx_new-${PHOENIX_VERSION}.ez"?
 install_phoenix:
 	printf "Y\n" | mix archive.install hex phx_new ${PHOENIX_VERSION}
 
-create_project:
+create_phoenix_project:
 	mix phx.new ${PROJECT_DIRECTORY} ${OPTIONS}
 	
 create_mix_project:
@@ -25,7 +25,7 @@ live_addon_prompts =
 # Y - in response to Fetch and install dependencies?
 post_setup_addon_prompts = Y\n
 
-apply_template:
+apply_phoenix_template:
 	cd ${PROJECT_DIRECTORY} && \
 	echo '{:nimble_phx_gen_template, path: "../", only: :dev, runtime: false},' > nimble_phx_gen_template.txt && \
 	sed -i -e '/{:phoenix, "~> /r nimble_phx_gen_template.txt' mix.exs && \

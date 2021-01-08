@@ -28,6 +28,7 @@ Then run `mix do deps.get, deps.compile` to install Nimble.Phx.Gen.Template.
 ## Usage
 
 ```
+mix help nimble.phx.gen.template # Print help
 mix nimble.phx.gen.template -v # Print the version
 
 # Phoenix application

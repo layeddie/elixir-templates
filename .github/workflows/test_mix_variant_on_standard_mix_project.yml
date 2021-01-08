@@ -30,13 +30,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-mix-
               
-      - name: Install Dependencies 
+      - name: Install Elixir Dependencies 
         run: mix deps.get
       
-      - name: Create project
+      - name: Create Mix project
         run: make create_mix_project PROJECT_DIRECTORY=sample_project OPTIONS=""
 
-      - name: Apply template
+      - name: Apply Mix template
         run: make apply_mix_template PROJECT_DIRECTORY=sample_project
 
       - name: Install Elixir Dependencies

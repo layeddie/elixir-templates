@@ -66,15 +66,15 @@ defmodule Nimble.Phx.Gen.Template.Addons.ExMachinaTest do
         Addons.ExMachina.apply(project)
 
         assert_file("test/support/data_case.ex", fn file ->
-          assert file =~ "import Nimble.Phx.Gen.Template.Factory"
+          assert file =~ "import NimblePhxGenTemplate.Factory"
         end)
 
         assert_file("test/support/channel_case.ex", fn file ->
-          assert file =~ "import Nimble.Phx.Gen.Template.Factory"
+          assert file =~ "import NimblePhxGenTemplate.Factory"
         end)
 
         assert_file("test/support/conn_case.ex", fn file ->
-          assert file =~ "import Nimble.Phx.Gen.Template.Factory"
+          assert file =~ "import NimblePhxGenTemplate.Factory"
         end)
       end)
     end

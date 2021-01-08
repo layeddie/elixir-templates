@@ -56,7 +56,7 @@ defmodule Nimble.Phx.Gen.Template.Addons.MixReleaseTest do
 
         assert_file("lib/nimble_phx_gen_template/release_tasks.ex", fn file ->
           assert file =~ """
-                 defmodule Nimble.Phx.Gen.Template.ReleaseTasks do
+                 defmodule NimblePhxGenTemplate.ReleaseTasks do
                    @app :nimble_phx_gen_template
 
                    def migrate do

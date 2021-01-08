@@ -1,5 +1,21 @@
 defmodule Mix.Tasks.Nimble.Phx.Gen.Template do
-  @shortdoc "Generates Nimble's Phoenix template"
+  @shortdoc "Apply Nimble's Elixir/Phoenix template"
+  @moduledoc """
+  #{@shortdoc}
+
+  - Hex: https://hex.pm/packages/nimble_phx_gen_template
+  - Github: https://github.com/nimblehq/elixir-templates
+
+    mix nimble.phx.gen.template -v # Print the version
+
+    # Phoenix application
+    mix nimble.phx.gen.template --api # Apply the Phoenix API template
+    mix nimble.phx.gen.template --live # Apply the Phoenix LiveView template
+    mix nimble.phx.gen.template --web # Apply the Phoenix Web template
+
+    # Non-Phoenix application
+    mix nimble.phx.gen.template --mix # Apply the Mix template
+  """
 
   use Mix.Task
 
