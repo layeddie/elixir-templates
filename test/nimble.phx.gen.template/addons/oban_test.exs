@@ -33,7 +33,7 @@ defmodule Nimble.Phx.Gen.Template.Addons.ObanTest do
 
         assert_file("priv/repo/migrations/20201120074154_add_oban_jobs_table.exs", fn file ->
           assert file =~ """
-                 defmodule NimblePhxGenTemplate.Repo.Migrations.AddObanJobsTable do
+                 defmodule Nimble.Phx.Gen.Template.Repo.Migrations.AddObanJobsTable do
                    use Ecto.Migration
 
                    def up do
@@ -83,7 +83,7 @@ defmodule Nimble.Phx.Gen.Template.Addons.ObanTest do
         assert_file("config/config.exs", fn file ->
           assert file =~ """
                  config :nimble_phx_gen_template, Oban,
-                   repo: NimblePhxGenTemplate.Repo,
+                   repo: Nimble.Phx.Gen.Template.Repo,
                    plugins: [Oban.Plugins.Pruner],
                    queues: [default: 10]
                  """

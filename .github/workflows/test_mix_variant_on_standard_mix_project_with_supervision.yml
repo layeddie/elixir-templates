@@ -1,4 +1,4 @@
-name: "Test Mix variant on custom Mix project"
+name: "Test Mix variant on standard Mix project with --sup option"
 
 on: push
 
@@ -34,7 +34,7 @@ jobs:
         run: mix deps.get
       
       - name: Create project
-        run: make create_mix_project PROJECT_DIRECTORY=sample_project OPTIONS="--module=CustomModule --app=custom_app"
+        run: make create_mix_project PROJECT_DIRECTORY=sample_project OPTIONS="--sup"
 
       - name: Apply template
         run: make apply_mix_template PROJECT_DIRECTORY=sample_project
