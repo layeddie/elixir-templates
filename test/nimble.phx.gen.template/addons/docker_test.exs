@@ -81,7 +81,7 @@ defmodule Nimble.Phx.Gen.Template.Addons.DockerTest do
 
         assert_file("bin/start.sh", fn file ->
           assert file =~ """
-                 bin/nimble_phx_gen_template eval "Nimble.Phx.Gen.Template.ReleaseTasks.migrate()"
+                 bin/nimble_phx_gen_template eval "NimblePhxGenTemplate.ReleaseTasks.migrate()"
 
                  bin/nimble_phx_gen_template start
                  """

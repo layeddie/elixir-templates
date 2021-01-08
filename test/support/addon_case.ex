@@ -37,7 +37,7 @@ defmodule Nimble.Phx.Gen.Template.AddonCase do
     parent_test_project_path = Path.join(tmp_path(), parent_test_project_path())
     test_project_path = Path.join(parent_test_project_path, "/nimble_phx_gen_template")
 
-    create_test_project(test_project_path)
+    create_phoenix_test_project(test_project_path)
 
     on_exit(fn ->
       File.rm_rf!(parent_test_project_path)
@@ -59,10 +59,10 @@ defmodule Nimble.Phx.Gen.Template.AddonCase do
   defp mock_latest_package_version({_package, version}),
     do: expect(Package, :get_latest_version, fn _package -> version end)
 
-  defp create_test_project(test_project_path) do
+  defp create_phoenix_test_project(test_project_path) do
     # N - in response to Fetch and install dependencies?
     Mix.shell().cmd(
-      "printf \"N\n\" | make create_project PROJECT_DIRECTORY=#{test_project_path} > /dev/null"
+      "printf \"N\n\" | make create_phoenix_project PROJECT_DIRECTORY=#{test_project_path} > /dev/null"
     )
   end
 
