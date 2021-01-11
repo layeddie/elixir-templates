@@ -1,4 +1,4 @@
-# Nimble.Template
+# NimbleTemplate
 
 Project repository template to set up all public Elixir/Phoenix projects at [Nimble](https://nimblehq.co/)
 
@@ -29,43 +29,43 @@ def deps do
 end
 ```
 
-Then run `mix do deps.get, deps.compile` to install Nimble.Template.
+Then run `mix do deps.get, deps.compile` to install NimbleTemplate.
 
-*Note:* Nimble.Template is only working on a new project, applying Nimble.Template to an on-going project might not work as expected.
+*Note:* NimbleTemplate is only working on a new project, applying NimbleTemplate to an on-going project might not work as expected.
 
 ## Usage
 
 ```
-mix help nimble.template.gen # Print help
-mix nimble.template.gen -v # Print the version
+mix help nimble_template.gen # Print help
+mix nimble_template.gen -v # Print the version
 
 # Phoenix application
-mix nimble.template.gen --api # Apply the Phoenix API template
-mix nimble.template.gen --live # Apply the Phoenix LiveView template
-mix nimble.template.gen --web # Apply the Phoenix Web template
+mix nimble_template.gen --api # Apply the Phoenix API template
+mix nimble_template.gen --live # Apply the Phoenix LiveView template
+mix nimble_template.gen --web # Apply the Phoenix Web template
 
 # Non-Phoenix application
-mix nimble.template.gen --mix # Apply the Mix template
+mix nimble_template.gen --mix # Apply the Mix template
 ```
 ## Requirements
 
-Nimble.Template has been developed and actively tested with:
+NimbleTemplate has been developed and actively tested with:
 - Elixir 1.11.3
 - Erlang/OTP 23.2.1
 - Phoenix 1.5.7
 
-Running Nimble.Template currently requires:
+Running NimbleTemplate currently requires:
 - Elixir 1.11.3
 - Erlang/OTP 23.2.1
 - Phoenix 1.5.7
 
 ## Contributing
 
-We appreciate any contribution to Nimble.Template.
+We appreciate any contribution to NimbleTemplate.
 
 ### Test
 
-Nimble.Template is using Github Action, the workflow files are located under `.github/workflows/` folder, it's including the Template test and Variant test workflow.
+NimbleTemplate is using Github Action, the workflow files are located under `.github/workflows/` folder, it's including the Template test and Variant test workflow.
 
 #### 1/ Template test
 
@@ -97,7 +97,7 @@ All test files are located under `test/` folder.
 
 #### 2/ Variant test
 
-Nimble.Template is supporting 4 variants:  
+NimbleTemplate is supporting 4 variants:  
 
 - API
 - Live
