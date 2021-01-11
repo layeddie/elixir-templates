@@ -1,9 +1,9 @@
-defmodule Nimble.Phx.Gen.Template.MixProject do
+defmodule Nimble.Template.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :nimble_phx_gen_template,
+      app: :nimble_template,
       version: "2.2.0",
       description:
         "Project repository template to set up all public Elixir/Phoenix projects at Nimble",
