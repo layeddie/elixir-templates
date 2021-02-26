@@ -45,16 +45,9 @@ runs:
       env:
         MIX_ENV: test
         DB_HOST: localhost
-    
-    - name: Run mix codebase
-      run: cd sample_project && mix codebase
-      shell: bash
-      env:
-        MIX_ENV: test
-        DB_HOST: localhost
       
     - name: Run mix test
-      run: cd sample_project && mix do compile --warnings-as-errors, coverage
+      run: cd sample_project && mix do compile --warnings-as-errors, codebase, coverage
       shell: bash
       env:
         MIX_ENV: test

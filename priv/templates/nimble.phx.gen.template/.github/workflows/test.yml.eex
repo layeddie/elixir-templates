@@ -71,11 +71,8 @@ jobs:
           MIX_ENV: test
           DB_HOST: localhost
 
-      - name: Run codebase check
-        run: mix codebase
-
       - name: Run Tests
-        run: mix do compile --warnings-as-errors, coverage
+        run: mix do compile --warnings-as-errors, codebase, coverage
         env:
           MIX_ENV: test
           DB_HOST: localhost
